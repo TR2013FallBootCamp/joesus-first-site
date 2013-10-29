@@ -2,12 +2,7 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def index
-  end
-
-  def ruby
-  end
-
-  def js
+  def about
+  	flash.now[:once] = "Once"
   end
 end
