@@ -3,6 +3,5 @@ class StaticPagesController < ApplicationController
   end
 
   def about
-  	flash.now[:once] = "Once"
   end
 end
