@@ -1,20 +1,22 @@
 $(document).ready(function(){
 
 	var text = $('.page-header');
-	
-	$(".btn-group").on('click', '#left', function(){
+	var AddRemove = function(classToAdd) {
 		$(text).removeClass();
-		$(text).addClass("text-left");
+		$(text).addClass(classToAdd);
+	};
+
+
+	$(".btn-group").on('click', '#left', function(){
+		AddRemove('text-left');
 	});
 	
 	$('.btn-group').on('click', '#center', function(){
-		$(text).removeClass();
-		$(text).addClass("text-center");
+		AddRemove('text-center');
 	});
 
 	$('.btn-group').on('click', '#right', function(){
-		$(text).removeClass();
-		$(text).addClass("text-right");
+		AddRemove('text-right');
 	});
 
 	$('button').filter('.close').click(function(){
